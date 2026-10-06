@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hong Kong Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Tomorrow:wght@400;500;600;700&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Hong Kong Live</h1>
+      <p class="details">Ziting Gao | MSc in Engineering in Electrical and Electronic Engineering</p>
+      <p class="subtitle">A personal dashboard providing live information on Hong Kong's weather, public transport, and air quality.</p>
+    </header>
+
+    <section class="cards" aria-label="Dashboard panels">
+      <article class="card">
+        <h2>Weather</h2>
+        <span class="status" id="weather-status">Loading</span>
+        <div class="card-body weather-body">
+          <p class="weather-station">Hong Kong Observatory</p>
+          <p class="weather-temp" id="weather-temp">…</p>
+          <p class="weather-updated" id="weather-updated"></p>
+          <p class="weather-error" id="weather-error" hidden></p>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Transport</h2>
+        <span class="status" id="mtr-status">Loading</span>
+        <div class="card-body weather-body">
+          <p class="weather-station">HKU · Island Line</p>
+          <p class="weather-temp" id="mtr-mins">…</p>
+          <p class="weather-updated" id="mtr-dest"></p>
+          <p class="weather-error" id="mtr-error" hidden></p>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Air Quality</h2>
+        <span class="status" id="aq-status">Loading</span>
+        <div class="card-body weather-body">
+          <p class="weather-station" id="aq-station">Central/Western</p>
+          <p class="weather-temp" id="aq-value">…</p>
+          <p class="weather-updated" id="aq-risk"></p>
+          <p class="weather-error" id="aq-error" hidden></p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
